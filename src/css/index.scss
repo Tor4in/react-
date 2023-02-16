@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	box-sizing: border-box;
+	list-style: none;
+	color: #8cc8de;
+	font-family: Arial;
+}
+
+body {
+	background-color: #305d8d;
+}
+
+.wraper {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template: [start] "h h" 80px[row1][row1]"nb c" 1fr[row2][row2]" f f" 150px[row-end]/200px 1fr;
+	grid-gap: 10px;
+
+	.header {
+		padding: 10px;
+		grid-area: h;
+		background-color: #194071;
+
+	}
+
+	.navbar {
+
+		grid-area: nb;
+		background-color: #194071;
+
+		ul {
+			padding: 20px 10px;
+
+			:first-child {
+				color: #478eb8;
+				font-size: 1.3em;
+			}
+
+			li {
+				padding: 5px;
+			}
+		}
+	}
+
+	.content {
+
+		grid-area: c;
+
+		.profile {
+
+			.icon {
+				box-sizing: border-box;
+				text-align: center;
+				word-spacing: 150px;
+				font-size: 2em;
+				display: inline-flex;
+				width: 200px;
+				align-items: center;
+				text-transform: uppercase;
+				height: 200px;
+				vertical-align: top;
+				background-color: rgba(255, 255, 255, 0.518);
+				color: #194071;
+
+			}
+
+			.data {
+				padding: 10px;
+
+				display: inline-block;
+
+				p {
+					padding: 4px;
+					font-size: 1.2em;
+				}
+			}
+			.posts_list{
+				margin: 25px 0 10px 5px;
+				.posts{
+					margin: 10px 0;
+					&_icon{
+						text-align: center;
+						line-height: 1.2;
+						font-weight: 700;
+						padding-top: 6px;
+						color: #194071;
+						display: inline-block;
+						width: 50px;
+						height: 50px;
+						background-color: rgba(255, 255, 255, 0.518);
+						vertical-align: top;
+					}
+					&_masseg{
+						display: inline-block;
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		padding: 10px;
+		grid-area: f;
+		background-color: #194071;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		.contact_data{
+
+			text-align: center;
+			p{
+				padding-top: 10px;
+				
+			}
+		}
+		
+	}
+}
