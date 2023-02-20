@@ -1,9 +1,9 @@
 import React from "react";
-import Content from "./content";
+import Content from "./jsx/content";
 import './css/index.css';
-import Header from "./header";
-import Navbar from "./navbar";
-import Footer from './footer';
+import Header from "./jsx/header";
+import Navbar from "./jsx/navbar";
+import Footer from './jsx/footer';
 
 function App() {
   return (

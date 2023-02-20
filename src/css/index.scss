@@ -77,11 +77,14 @@ body {
 					font-size: 1.2em;
 				}
 			}
-			.posts_list{
+
+			.posts_list {
 				margin: 25px 0 10px 5px;
-				.posts{
+
+				.posts {
 					margin: 10px 0;
-					&_icon{
+
+					&_icon {
 						text-align: center;
 						line-height: 1.2;
 						font-weight: 700;
@@ -93,13 +96,60 @@ body {
 						background-color: rgba(255, 255, 255, 0.518);
 						vertical-align: top;
 					}
-					&_masseg{
+
+					&_masseg {
 						display: inline-block;
 						padding: 5px;
 					}
 				}
 			}
 		}
+
+		.masseges {
+			display: grid;
+			grid-template: [start]"dl ds" 1fr[row-end]/250px 1fr;
+
+			.dialog {
+				&_list {
+					font-size: 1.3em;
+					grid-area: dl;
+					border-right: 2px solid #8cc8de;
+
+					ul {
+						padding-left: 20px;
+
+						li {
+							
+							padding: 15px 0;
+							width: 0px;
+							transition: all 0.5s ease;
+							
+							&:hover{
+								font-size: 1.5em;
+								padding: 10px 0 10px 14px;
+							}
+						}
+
+						
+					}
+				}
+
+				&_screen {
+					grid-area: ds;
+					.masseg{
+						border: 1px solid #478eb8;
+						width: auto;
+						div{
+
+						}
+						p{
+							padding: 10px;
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	.footer {
@@ -109,14 +159,16 @@ body {
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;
-		.contact_data{
+
+		.contact_data {
 
 			text-align: center;
-			p{
+
+			p {
 				padding-top: 10px;
-				
+
 			}
 		}
-		
+
 	}
 }
